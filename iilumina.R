@@ -267,9 +267,3 @@ GSE129534_data<-read.csv('./GSE129534/GSE129534_combined.csv')
 write.csv(GSE129534_data,'./fixed_data_sets/GSE129534_all_data.txt',quote = F,row.names = F)
 ##################################
 rm(list=ls())
-
-###### mrging all the files ######
-files<-list.files('./fixed_data_sets')
-for(file in files) {assign(file,read.csv(paste0('./fixed_data_sets/',file),sep=','))}
-GSE123993_data.txt<-read.csv('./fixed_data_sets/GSE123993_data.txt',sep='\t')
-GSE117525_data.txt<-read.csv('./fixed_data_sets/GSE117525_data.txt',sep='\t')
